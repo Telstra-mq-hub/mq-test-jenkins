@@ -2,9 +2,9 @@ pipeline {
     agent any
     environment {
         IBM_ENTITLEMENT_KEY = credentials('ibm_entitlement_key')
-        RELEASE_NAME        = "qm1"        
+        RELEASE_NAME        = "qm4"        
         NAMESPACE           = "mq"
-        STORAGE_CLASS       = "ibmc-block-gold"
+        STORAGE_CLASS       = "ocs-storagecluster-cephfs"
         QMGR_NAME           = "QM1"
         CHANNEL_NAME        = "QM1CHL"
         LICENSE             = "L-RJON-BZFQU2"
