@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mq-test
+  namespace: mq
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mq-test
+  template:
+    metadata:
+      labels:
+        app: mq-test
+    spec:
+      containers:
+      - name: mq-test
+        image: mq/testing:latest
+        ports:
+        - containerPort: 80
