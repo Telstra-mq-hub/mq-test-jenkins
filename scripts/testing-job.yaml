@@ -12,6 +12,7 @@ spec:
       containers:
         - name: mq-test
           image: image-registry.openshift-image-registry.svc:5000/mq/testing:latest
-          command: {}
-           # - print 'testing done'
+          command: ["/bin/sh","-c"]
+          # todo: replace env.json
+          args: ["cat env.json; sh runTest.sh"]
       restartPolicy: Never
