@@ -30,7 +30,7 @@ pipeline {
         stage('Testing') {
             steps {
                 echo 'Testing ~ test the queue manager'
-                sh('oc apply -f ./scripts/test-deployment.yaml')
+                sh('oc apply -f ./scripts/test-deployment.yaml -n mq')
             }
         }
     }
