@@ -12,6 +12,6 @@ spec:
       containers:
         - name: mq-test
           image: image-registry.openshift-image-registry.svc:5000/mq/testing:latest
-          command:
+          command: {}
            # - print 'testing done'
       restartPolicy: Never
