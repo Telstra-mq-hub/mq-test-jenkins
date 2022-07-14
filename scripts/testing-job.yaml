@@ -14,5 +14,5 @@ spec:
           image: image-registry.openshift-image-registry.svc:5000/mq/testing:latest
           command: ["/bin/sh","-c"]
           # todo: replace env.json
-          args: ["cat env.json; sh runTest.sh"]
+          args: ["sh ./tmp/runTest.sh"]
       restartPolicy: Never
